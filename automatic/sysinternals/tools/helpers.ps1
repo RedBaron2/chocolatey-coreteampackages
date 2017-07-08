@@ -21,4 +21,18 @@ $tools = `
         mkdir "$root_path\$tool" -ea 0 | Out-Null
         New-ItemProperty -Path "$root_path\$tool" -Name EulaAccepted -Value 1 -Force | Out-Null
     }
+
+    $vt = "$root_path\SigCheck\VirusTotal"
+    mkdir $vt -ea 0 | Out-Null
+    New-ItemProperty -Path $vt -Name VirusTotalTermsAccepted -Value 1 -Force | Out-Null
+}
+
+function Is-NanoServer() {
+  # This would be true for both nano servers, and IoT devices.
+  if ($PSVersionTable.PSEdition -ne 'Core') { return $false }
+
+  # 143 = Datacenter nano server
+  # 144 = Standard nano server
+  $sku = (Get-CimInstance -ClassName Win32_OperatingSystem).OperatingSystemSKU
+  return ($sku -eq 143) -or ($sku -eq 144);
 }

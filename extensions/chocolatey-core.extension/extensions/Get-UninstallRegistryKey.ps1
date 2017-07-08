@@ -11,6 +11,8 @@
 .PARAMETER SoftwareName
     Part or all of the Display Name as you see it in Programs and Features.
     It should be enough to be unique.
+    The syntax follows the rules of the PowerShell `-like` operator, so the `*` character is interpreted
+    as a wildcard, which matches any (zero or more) characters.
 
     If the display name contains a version number, such as "Launchy (2.5)", it is recommended you use a
     fuzzy search `"Launchy (*)"` (the wildcard `*`) so if Launchy auto-updates or is updated outside
@@ -19,6 +21,9 @@
     Take care not to abuse fuzzy/glob pattern searches. Be conscious of programs that may have shared
     or common root words to prevent overmatching. For example, "SketchUp*" would match two keys with software
     names "SketchUp 2016" and "SketchUp Viewer" that are different programs released by the same company.
+
+.PARAMETER IgnoredArguments
+    Allows splatting with arguments that do not apply and future expansion. Do not use directly.
 
 .INPUTS
     System.String
@@ -53,7 +58,9 @@ function Get-UninstallRegistryKey {
     param(
         [Parameter(Mandatory=$true, ValueFromPipeline=$true)]
         [ValidateNotNullOrEmpty()]
-        [string] $SoftwareName
+        [string] $SoftwareName,
+        [parameter(ValueFromRemainingArguments = $true)]
+        [Object[]] $IgnoredArguments
     )
     Write-Debug "Running 'Get-UninstallRegistryKey' for `'$env:ChocolateyPackageName`' with SoftwareName:`'$SoftwareName`'";
 
@@ -72,8 +79,9 @@ function Get-UninstallRegistryKey {
     {
         $success = $false
 
+        $keyPaths = $keys | Select-Object -ExpandProperty PSPath
         try {
-            [array]$foundKey = Get-ItemProperty -Path $keys.PsPath -ea 0 | ? { $_.DisplayName -like $SoftwareName }
+            [array]$foundKey = Get-ItemProperty -Path $keyPaths -ea 0 | ? { $_.DisplayName -like $SoftwareName }
             $success = $true
         } catch {
             Write-Debug "Found bad key."

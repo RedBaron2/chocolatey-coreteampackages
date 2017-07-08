@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>fiddler4</id>
     <title>Fiddler</title>
     <owners>chocolatey</owners>
-    <version>4.6.3.50306</version>
+    <version>4.6.20171.26113</version>
     <authors>Telerik</authors>
     <summary>Fiddler Web Debugging Proxy</summary>
     <description>
@@ -13,17 +13,26 @@ Fiddler is a Web Debugging Proxy which logs all HTTP(S) traffic between your com
 
 Fiddler is freeware and can debug traffic from virtually any application, including Internet Explorer, Mozilla Firefox, Opera, and thousands more.
 
-### Note
+## Features
+
+- Web debugging
+- Performance testing
+- HTTP/HTTPS Traffic Recording
+- Web Session Manipulation
+- Security Testing
+- Customization using .NET language
+- Works with any broser, any system and any platform.
+
+## Notes
 
 - This will always install the latest version of Fiddler 4, regardless of the version specified in the package.
     </description>
     <projectUrl>http://www.telerik.com/fiddler</projectUrl>
-    <tags>fiddler fiddler4 web debugging proxy admin</tags>
+    <tags>fiddler freeware fiddler4 web debugging cross-platform proxy admin</tags>
     <copyright></copyright>
     <licenseUrl>http://www.telerik.com/purchase/license-agreement/fiddler</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e4a49519947c3cff55c17a0b08266c56b0613e64/icons/fiddler.svg</iconUrl>
-    <releaseNotes> http://www.telerik.com/support/whats-new/fiddler</releaseNotes>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/e7940eeec0005981b565d98660c6cb9be1865881/icons/fiddler.svg</iconUrl>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/fiddler4</packageSourceUrl>
   </metadata>
   <files>

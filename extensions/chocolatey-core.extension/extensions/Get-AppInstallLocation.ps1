@@ -1,3 +1,4 @@
+. "$PSScriptRoot\Get-UninstallRegistryKey.ps1"
 <#
 .SYNOPSIS
     Get application install location
@@ -25,7 +26,11 @@ function Get-AppInstallLocation {
     param(
         # Regular expression pattern
         [ValidateNotNullOrEmpty()]
-        [string] $AppNamePattern
+        [string] $AppNamePattern,
+
+        # Allows splatting with arguments that do not apply and future expansion. Do not use directly.
+        [parameter(ValueFromRemainingArguments = $true)]
+        [Object[]] $IgnoredArguments
     )
 
     function strip($path) { if ($path.EndsWith('\')) { return $path -replace '.$' } else { $path } }
@@ -40,8 +45,8 @@ function Get-AppInstallLocation {
         if ($location -and (Test-Path $location))  { return strip $location }
 
         Write-Verbose "Trying Uninstall key property 'UninstallString'"
-        $location = $key.UninstallString.Replace('"', '')
-        if ($location) { $location = Split-Path $location }
+        $location = $key.UninstallString
+        if ($location) { $location = $location.Replace('"', '') | Split-Path }
         if ($location -and (Test-Path $location))  { return strip $location }
 
         Write-Verbose "Trying Uninstall key property 'DisplayIcon'"

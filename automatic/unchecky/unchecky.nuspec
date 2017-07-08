@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>unchecky</id>
     <title>Unchecky</title>
-    <version>1.0.1.20161027</version>
+    <version>1.0.2</version>
     <authors>RaMMicHaeL</authors>
     <owners>Redsandro</owners>
     <summary>Unchecky aims to keep potentially unwanted programs out of your computer.</summary>
@@ -12,13 +13,15 @@ Have you ever felt, while installing software, that the installer tries to push 
 
 __Unchecky aims to keep potentially unwanted programs out of your computer.__
 
+![Unchecky](https://i.imgur.com/DTUlrjq.png)
+
 ### Notes
 
 * This package always installs the latest version of the application, regardless of the version specified in the package.
 * This program automatically updates itself.
     </description>
     <projectUrl>http://unchecky.com/</projectUrl>
-    <tags>Installer Prevent System Unwanted Toolbar Installers Uncheck Warn Update admin</tags>
+    <tags>prevent system unwanted toolbar uncheck update security freeware admin</tags>
     <copyright>Copyright © 2016 Reason Company Software Inc.</copyright>
     <licenseUrl>https://unchecky.com/eula</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -31,4 +34,3 @@ __Unchecky aims to keep potentially unwanted programs out of your computer.__
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->

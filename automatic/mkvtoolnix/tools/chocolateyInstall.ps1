@@ -1,12 +1,12 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName    = 'mkvtoolnix'
   fileType       = 'exe'
-  url            = 'https://mkvtoolnix.download/windows/releases/9.6.0/mkvtoolnix-32bit-9.6.0-setup.exe'
-  url64bit       = 'https://mkvtoolnix.download/windows/releases/9.6.0/mkvtoolnix-64bit-9.6.0-setup.exe'
-  checksum       = '520e9b435826a7bd941a05e0542ee21632cb5e0ae1884e164c5bab5946363f9a'
-  checksum64     = 'c4f99f1fd70d0284dce7c6ac30e9f31ae19f561a80cd2257c1cf442337477c43'
+  url            = 'https://mkvtoolnix.download/windows/releases/13.0.0/mkvtoolnix-32bit-13.0.0-setup.exe'
+  url64bit       = 'https://mkvtoolnix.download/windows/releases/13.0.0/mkvtoolnix-64bit-13.0.0-setup.exe'
+  checksum       = '6bb0b73bcde4cea9f7ce80626362ee7898ff7f95a9cad835fe97b5130f219a26'
+  checksum64     = 'df9ed99aaa7fff4188fdfd7fdbc9295da73ed26f4dfce84d7d4e8de1ce1ace1f'
   checksumType   = 'sha256'
   checksumType64 = 'sha256'
   silentArgs     = '/S'

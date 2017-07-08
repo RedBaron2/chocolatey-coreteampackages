@@ -1,8 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>youtube-dl</id>
-    <version>2016.12.18</version>
+    <version>2017.07.02</version>
     <title>youtube-dl</title>
     <owners>chocolatey</owners>
     <authors>Ricardo Garcia and others</authors>
@@ -22,7 +23,7 @@ Optional dependency package: [ffmpeg](/packages/ffmpeg) (for stream extraction a
     <releaseNotes>https://github.com/rg3/youtube-dl/blob/master/ChangeLog</releaseNotes>
     <copyright>Copyright © 2006-2016 Ricardo Garcia Gonzalez</copyright>
     <language>en-US</language>
-    <tags>youtube-dl ffmpeg youtube download</tags>
+    <tags>youtube-dl cli foss cross-platform video multimedia ffmpeg youtube download</tags>
     <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages</packageSourceUrl>
     <dependencies>
       <dependency id="vcredist2010" version="10.0" />
@@ -30,6 +31,6 @@ Optional dependency package: [ffmpeg](/packages/ffmpeg) (for stream extraction a
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" /> 
   </files>
 </package>
-<!-- “UTF-8” test -->

@@ -1,0 +1,21 @@
+VERIFICATION
+
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download
+locations and can be verified by doing the following:
+
+1. Download the following
+  32-Bit software: <https://qtox-win.pkg.tox.chat/qtox/win32/download>
+  64-Bit software: <https://qtox-win.pkg.tox.chat/qtox/win64/download>
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: SHA256
+  checksum32: B4EDAA957DF2030CA4619ACED78348CFF11B790DAC9883FC945760F670A2FCE7
+  checksum64: D07B9E187E3882B9BDF97D8D883852531587728C1DB88B0D06200BC7928AE74D
+
+The file 'LICENSE.txt' has been obtained from <https://raw.githubusercontent.com/qTox/qTox/master/LICENSE>

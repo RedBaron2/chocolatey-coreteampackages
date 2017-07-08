@@ -1,12 +1,12 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName            = 'cdburnerxp'
   fileType               = 'msi'
-  url                    = 'https://download.cdburnerxp.se/msi/cdbxp_setup_4.5.7.6452.msi'
-  url64bit               = 'https://download.cdburnerxp.se/msi/cdbxp_setup_x64_4.5.7.6452.msi'
-  checksum               = '1090f7a9033567cf2bc63ff6e404d766172f4aaf35b79b515e12f06cd9eb35e6'
-  checksum64             = '33949797be632ed9eb0bcc8cd9f43e1096ce8f2bd7a2b43c778a2ed249c9d13d'
+  url                    = 'https://download.cdburnerxp.se/msi/cdbxp_setup_4.5.7.6623.msi'
+  url64bit               = 'https://download.cdburnerxp.se/msi/cdbxp_setup_x64_4.5.7.6623.msi'
+  checksum               = 'e4f35b5948b92a02b4f0e00426536dc65e3c28b200f2a9c8f3e19b01bff502f3'
+  checksum64             = 'b73e4fc3843aba9f9a1d8ecf01e52307b856e088fb4f6a5c74e52d0f9db25508'
   checksumType           = 'sha256'
   checksumType64         = 'sha256'
   silentArgs             = '/quiet'

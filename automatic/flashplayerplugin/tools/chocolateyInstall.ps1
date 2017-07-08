@@ -1,10 +1,10 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
   packageName            = 'flashplayerplugin'
   fileType               = 'msi'
-  url                    = 'https://download.macromedia.com/get/flashplayer/current/licensing/win/install_flash_player_23_plugin.msi'
-  checksum               = '17327ab2c9666a0bc88a5f661c1bf98bfba644d92f252f5cb23cbb4b2527f3fd'
+  url                    = 'https://download.macromedia.com/get/flashplayer/pdc/26.0.0.131/install_flash_player_26_plugin.msi'
+  checksum               = 'f13fdcc14f65d53a6ecc48fb7148edd9e3da34e2bbf17604b487ef35e8c15377'
   checksumType           = 'sha256'
   silentArgs             = '/quiet /norestart REMOVE_PREVIOUS=YES'
   validExitCodes         = @(0)

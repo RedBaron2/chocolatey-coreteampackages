@@ -1,8 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>mp3tag</id>
-    <version>2.80</version>
+    <version>2.83</version>
     <title>Mp3tag</title>
     <owners>chocolatey</owners>
     <authors>Florian Heidenreich</authors>
@@ -22,4 +23,3 @@ Mp3tag is a powerful and yet easy-to-use tool to edit metadata of common audio f
     <file src="tools\**" target="tools" />
   </files>
 </package>
-<!-- “UTF-8” test -->
